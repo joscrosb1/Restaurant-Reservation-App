@@ -5,8 +5,8 @@ A full-stack restaurant reservation management application designed for restaura
 
 ## Live Project
 
-- [Frontend Deployment]([[https://example.com](https://restaurant-reservation-app-frontend-2akq.onrender.com)
-- [Backend Deployment]([https://example-api.com](https://restaurant-reservation-app-backend-m3o9.onrender.com)
+- ([Frontend Deployment](https://restaurant-reservation-app-frontend-2akq.onrender.com)
+- ([Backend Deployment](https://restaurant-reservation-app-backend-m3o9.onrender.com)
 
 ## Technology Used
 
