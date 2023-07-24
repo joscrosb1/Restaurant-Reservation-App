@@ -70,7 +70,7 @@ The API allows for the following routes:
 | GET    | /reservations/:reservation_id    | List a reservation by ID                           |
 | PUT    | /reservations/:reservation_id    | Update a reservation                               |
 | PUT    | /reservations/:reservation_id/status | Update reservation status                         |
-                |
+                
 
 ## Installation
 
