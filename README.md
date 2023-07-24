@@ -5,8 +5,8 @@ A full-stack restaurant reservation management application designed for restaura
 
 ## Live Project
 
-- [Front-end Deployment](https://restaurant-reservation-app-frontend-2akq.onrender.com)
-- [Back-end Deployment](https://restaurant-reservation-app-backend-m3o9.onrender.com)
+- [Front-End Deployment](https://restaurant-reservation-app-frontend-2akq.onrender.com)
+- [Back-End Deployment](https://restaurant-reservation-app-backend-m3o9.onrender.com)
 
 ## Technology Used
 
@@ -29,19 +29,23 @@ A full-stack restaurant reservation management application designed for restaura
 ## Frontend Overview
 
 ### Dashboard View
-![Dashboard View](dashboard.png)
+<img width="955" alt="Dashboard" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/381afedd-bbf1-430e-b2e5-a7a7fa0a89a9">
+
 
 ### Create a New Reservation
-![Create Reservation](create_reservation.png)
+<img width="960" alt="CreateReservation" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/41067e9c-d9f4-4401-b999-21df5da60aa0">
+
 
 ### Create a New Table
-![Create Table](create_table.png)
+<img width="960" alt="CreateNewTable" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9304063a-79cf-4280-9645-a4d75008bd31">
+
 
 ### Seat a Reservation
-![Seat Reservation](select_table.png)
+<img width="958" alt="Seat-Reservation" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/29a483ef-f57c-4afc-9d31-7d3caa462f4b">
+
 
 ### Find a Reservation
-![Find Reservation]<img width="958" alt="Find" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9ed594e5-04c5-4bc9-958f-7fa67d0e62de">
+<img width="958" alt="Find" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9ed594e5-04c5-4bc9-958f-7fa67d0e62de">
 
 
 
