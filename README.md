@@ -5,8 +5,8 @@ A full-stack restaurant reservation management application designed for restaura
 
 ## Live Project
 
-- ([Frontend Deployment](https://restaurant-reservation-app-frontend-2akq.onrender.com)
-- ([Backend Deployment](https://restaurant-reservation-app-backend-m3o9.onrender.com)
+- [Front-end Deployment](https://restaurant-reservation-app-frontend-2akq.onrender.com)
+- [Back-end Deployment](https://restaurant-reservation-app-backend-m3o9.onrender.com)
 
 ## Technology Used
 
@@ -41,8 +41,8 @@ A full-stack restaurant reservation management application designed for restaura
 ![Seat Reservation](select_table.png)
 
 ### Find a Reservation
-![Find Reservation](<img width="958" alt="Find" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9ed594e5-04c5-4bc9-958f-7fa67d0e62de">
-)
+![Find Reservation]<img width="958" alt="Find" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9ed594e5-04c5-4bc9-958f-7fa67d0e62de">
+
 
 
 
