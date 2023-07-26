@@ -1,5 +1,3 @@
-/** @format */
-
 const path = require("path");
 
 require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
@@ -19,6 +17,10 @@ app.use(express.json());
 
 app.use("/reservations", reservationsRouter);
 app.use("/tables", tablesRouter);
+
+
+
+
 
 app.use(notFound);
 app.use(errorHandler);

@@ -1,58 +1,42 @@
 import React from "react";
+
 import { Redirect, Route, Switch } from "react-router-dom";
-
-// Import components
+import NewReservationForm from "../reservations/NewReservationForm";
+import ReservationSeating from "../reservations/ReservationSeating";
+import SearchReservations from "../reservations/SearchReservations";
+import EditCurrentReservation from "../reservations/EditCurrentReservation";
 import Dashboard from "../dashboard/Dashboard";
-import NewReservation from "../reservations/NewReservation";
-import Seat from "../reservations/Seat";
-import SearchReservation from "../reservations/SearchReservation";
-import EditReservation from "../reservations/EditReservation";
-import NewTable from "../tables/NewTable";
 import NotFound from "./NotFound";
-
-// Import utility functions
+import NewTable from "../tables/NewTable";
 import { today } from "../utils/date-time";
 
-/**
- * Defines all the routes for the application.
- * @returns {JSX.Element}
- */
 function Routes() {
   return (
     <Switch>
-      {/* Redirect root path to the dashboard */}
       <Route exact={true} path="/">
         <Redirect to={"/dashboard"} />
       </Route>
-      {/* Redirect /reservations to the dashboard */}
       <Route exact={true} path="/reservations">
         <Redirect to={"/dashboard"} />
       </Route>
-      {/* Dashboard route */}
       <Route path="/dashboard">
         <Dashboard date={today()} />
       </Route>
-      {/* New reservation route */}
       <Route path="/reservations/new">
-        <NewReservation />
+        <NewReservationForm />
       </Route>
-      {/* Edit reservation route */}
       <Route path="/reservations/:reservation_id/edit">
-        <EditReservation />
+        <EditCurrentReservation />
       </Route>
-      {/* Seat reservation route */}
       <Route path="/reservations/:reservation_id/seat">
-        <Seat />
+        <ReservationSeating />
       </Route>
-      {/* New table route */}
       <Route path="/tables/new">
         <NewTable />
       </Route>
-      {/* Search reservation route */}
       <Route path="/search">
-        <SearchReservation />
+        <SearchReservations />
       </Route>
-      {/* Default route for not found pages */}
       <Route>
         <NotFound />
       </Route>
