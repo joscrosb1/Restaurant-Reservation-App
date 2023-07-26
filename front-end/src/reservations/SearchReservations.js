@@ -1,80 +1,100 @@
+/** @format */
+
 import React, { useState } from "react";
+
+//import utility functions
 import { searchReservations } from "../utils/api";
+
+//import components
 import ErrorAlert from "../layout/ErrorAlert";
 import ReservationsList from "./ReservationsList";
 
 const SearchReservations = () => {
-  const [inputData, setInputData] = useState("");
-  const [error, setError] = useState(null);
-  const [reservations, setReservations] = useState([]);
+	const [inputData, setInputData] = useState("");
+	const [error, setError] = useState(null);
+	const [reservations, setReservations] = useState([]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setError(null);
+	const submitHandler = async (event) => {
+		event.preventDefault();
+		setError(null);
 
-    try {
-      const response = await searchReservations(inputData);
-      setReservations(response);
-      setInputData("");
-    } catch (error) {
-      setError(error);
-    }
-  };
+		const abortController = new AbortController();
+		try {
+			const response = await searchReservations(
+				inputData,
+				abortController.signal,
+			);
 
-  const handleChange = (event) => {
-    setInputData(event.target.value);
-  };
+			setReservations(response);
+			setInputData("");
+		} catch (error) {
+			if (error.name !== "AbortError") {
+				setError(error);
+			}
+		}
+		return () => abortController.abort();
+	};
 
-  const handleResetError = () => {
-    setError(null);
-  };
+	const changeHandler = (event) => {
+		const inputValue = event.target.value;
+	
+		// Remove any non-digit characters from the input value
+		const numericValue = inputValue.replace(/\D/g, "");
+	
+		// Update the input state with the sanitized numeric value
+		setInputData(numericValue);
+	};
 
-  return (
-    <main>
-      <div className="col-lg-6 form-group mx-auto">
-        <div className="row my-3 justify-content-center">
-          <h2 className="custom-heading">Find reservation</h2>
-          <ErrorAlert error={error} resetError={handleResetError} />
-        </div>
+	return (
+		<main>
+			<div className="col form-group">
+				<div className="row d-md-flex my-3">
+					<h2>Find reservation</h2>
 
-        <form onSubmit={handleSubmit}>
-          <div className="row input-group mb-3 justify-content-center">
-            <input
-              type="text"
-              className="custom-input form-control"
-              name="mobile_number"
-              placeholder="Enter a customer's phone number"
-              aria-label="mobile_number"
-              aria-describedby="custom-addon"
-              required
-              value={inputData}
-              onChange={handleChange}
-            />
-            <div className="input-group-append">
-              <button className="custom-button btn btn-primary" id="custom-addon" type="submit">
-                Find
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+					<ErrorAlert error={error} />
+				</div>
 
-      <div className="container-fluid col-lg-6">
-        <div className="row mb-3">
-          <h4 className="custom-subheading">Search Result</h4>
-        </div>
-        {reservations.length > 0 ? (
-          <div className="row mb-3">
-            <ReservationsList reservations={reservations} />
-          </div>
-        ) : (
-          <div className="row mb-3 alert alert-dark text-center custom-alert" role="alert">
-            No reservations found
-          </div>
-        )}
-      </div>
-    </main>
-  );
+				<form onSubmit={submitHandler}>
+					<div className="row input-group mb-3">
+						<input
+							type="tel"
+							className="form-control"
+							name="mobile_number"
+							placeholder="Enter a customer's phone number"
+							aria-label="mobile_number"
+							aria-describedby="basic-addon2"
+							required={true}
+							value={inputData}
+							onChange={changeHandler}
+						/>
+						<button
+							className="btn btn-primary"
+							id="basic-addon2"
+							type="submit">
+							Find
+						</button>
+					</div>
+				</form>
+			</div>
+
+			<div className="container-fluid col">
+				<div className="row d-md-flex mb-3">
+					<h4>Search Result</h4>
+				</div>
+				{reservations.length > 0 ? (
+					<div className="row d-md-flex mb-3">
+						<ReservationsList reservations={reservations} />
+					</div>
+				) : (
+					<div
+						className="row d-md-flex mb-3 alert alert-dark text-center"
+						role="alert">
+						No reservations found
+					</div>
+				)}
+			</div>
+		</main>
+	);
 };
 
 export default SearchReservations;
