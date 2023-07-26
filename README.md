@@ -52,13 +52,14 @@ The API allows for the following routes:
 
 # Tables Route
 
-| Method | Route                      | Description                               |
-| ------ | -------------------------- | ----------------------------------------- |
-| POST   | /tables                    | Create a new table                        |
-| GET    | /tables                    | List all tables                           |
-| GET    | /tables/:table_id          | List a table by ID                        |
-| PUT    | /tables/:table_id/seat     | Assign a table to a reservation           |
-| DELETE | /tables/:table_id/seat     | Remove a reservation from a table         |
+| Method      | Route                   |  Description                                        |
+|-------------|-------------------------| ----------------------------------------------------|
+| POST        |  /tables               | Creates a new table                                 |
+| GET         |  /tables               | Lists all tables                                    |
+| GET         |  /tables/:table_id     | Retrieves a specific table by its `table_id`        |
+| PUT         |  /tables/:table_id/seat| Updates a specific table's `seat` by its `table_id` |
+| DELETE      |  /tables/:table_id/seat| Deletes a specific table's `seat` by its `table_id` |
+
 
 # Reservation Route
 
