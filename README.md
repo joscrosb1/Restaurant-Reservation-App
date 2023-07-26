@@ -29,19 +29,19 @@ A full-stack restaurant reservation management application designed for restaura
 ## Frontend Overview
 
 ### Dashboard View
-<img width="955" alt="Dashboard" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/381afedd-bbf1-430e-b2e5-a7a7fa0a89a9">
+<img width="949" alt="dash" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/24364203-5a2d-48b1-bfe7-93d54c3efd54">
 
 ### Create a New Reservation
-<img width="960" alt="CreateReservation" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/41067e9c-d9f4-4401-b999-21df5da60aa0">
+<img width="960" alt="create" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/7779d86b-595b-46c1-9b7b-d17041ba918d">
 
 ### Create a New Table
-<img width="960" alt="CreateNewTable" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9304063a-79cf-4280-9645-a4d75008bd31">
+<img width="960" alt="Screenshot 2023-07-26 061529" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/c817e3b1-4c26-4559-95e1-86251ac71a0b">
 
 ### Seat a Reservation
-<img width="958" alt="Seat-Reservation" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/29a483ef-f57c-4afc-9d31-7d3caa462f4b">
+<img width="960" alt="seat" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/f9c24002-fb00-491d-a11c-e79b4489879d">
 
 ### Find a Reservation
-<img width="958" alt="Find" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/9ed594e5-04c5-4bc9-958f-7fa67d0e62de">
+<img width="960" alt="search" src="https://github.com/joscrosb1/Restaurant-Reservation-App/assets/116053884/8bd2c832-5541-45c6-a814-355ecf3350f8">
 
 
 
